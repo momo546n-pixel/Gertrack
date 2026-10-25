@@ -54,6 +54,49 @@ et côté frontend (garde de routes + sidebar par rôle).
 - **Audit** : journal des actions sensibles.
 - **Thème clair/sombre** et design system maison côté frontend.
 
+## Captures d'écran
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/login.png" alt="Page de connexion" /></td>
+    <td width="50%"><img src="docs/screenshots/dashboard.png" alt="Dashboard DG" /></td>
+  </tr>
+  <tr>
+    <td><em>Connexion</em></td>
+    <td><em>Dashboard — vue DG</em></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/requests.png" alt="Demandes" /></td>
+    <td><img src="docs/screenshots/projects.png" alt="Projets" /></td>
+  </tr>
+  <tr>
+    <td><em>Demandes d'achat et de stock</em></td>
+    <td><em>Opérations &amp; projets</em></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/project-detail.png" alt="Détail projet" /></td>
+    <td><img src="docs/screenshots/warehouses.png" alt="Magasins" /></td>
+  </tr>
+  <tr>
+    <td><em>Détail projet — avancement et budget</em></td>
+    <td><em>Gestion des magasins</em></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/financial-execution.png" alt="Exécution financière" /></td>
+    <td><img src="docs/screenshots/audit.png" alt="Centre d'audit" /></td>
+  </tr>
+  <tr>
+    <td><em>Exécution financière — vue Responsable Financier</em></td>
+    <td><em>Centre d'audit</em></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="docs/screenshots/administration.png" alt="Administration" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>Administration — gestion des comptes (DG)</em></td>
+  </tr>
+</table>
+
 ## Prérequis
 
 - Python 3.12+
