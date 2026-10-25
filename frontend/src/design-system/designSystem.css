@@ -1,0 +1,51 @@
+/* Design System — états interactifs partagés (hover/active), non exprimables
+   via les style objects inline utilisés partout ailleurs dans l'app. */
+
+.ds-btn:active { transform: scale(0.97); }
+.ds-btn:hover:not(:disabled) { filter: brightness(1.08); }
+.ds-btn[data-variant="secondary"]:hover:not(:disabled),
+.ds-btn[data-variant="ghost"]:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: var(--border-default);
+  filter: none;
+}
+
+.ds-icon-btn { transition: transform 140ms var(--ease-out), background 140ms ease, color 140ms ease; }
+.ds-icon-btn:hover { background: var(--bg-hover); color: var(--text-secondary); }
+.ds-icon-btn:active { transform: scale(0.92); }
+
+.ds-card { transition: border-color 160ms ease, box-shadow 160ms ease; }
+.ds-card[data-hoverable="true"]:hover { border-color: var(--border-default); box-shadow: var(--shadow-md); }
+
+.ds-modal-overlay { animation: dsFadeIn 180ms var(--ease-out) both; }
+.ds-modal-panel   { animation: dsModalIn 200ms var(--ease-out) both; }
+
+.ds-skeleton {
+  background: linear-gradient(90deg, var(--bg-surface-alt), var(--border-subtle), var(--bg-surface-alt));
+  background-size: 200% 100%;
+  animation: dsShimmer 1.4s ease-in-out infinite;
+}
+
+.ds-theme-toggle { transition: transform 200ms var(--ease-out), background 140ms ease; }
+.ds-theme-toggle:hover { background: var(--bg-hover); }
+.ds-theme-toggle:active { transform: scale(0.9); }
+
+@keyframes dsFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dsModalIn {
+  from { opacity: 0; transform: scale(0.96) translateY(4px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes dsShimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+@keyframes dsFadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-btn, .ds-icon-btn, .ds-card, .ds-modal-overlay, .ds-modal-panel, .ds-skeleton, .ds-theme-toggle {
+    animation: none !important; transition: none !important;
+  }
+}

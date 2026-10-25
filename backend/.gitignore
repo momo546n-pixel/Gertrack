@@ -1,0 +1,26 @@
+# Environnement virtuel
+.venv/
+venv/
+env/
+
+# Secrets / configuration locale
+.env
+.env.*
+!.env.example
+
+# Override sqlite jetable pour les tests (créé/supprimé autour de chaque
+# run — voir le rituel de test du projet, ne doit jamais être commité)
+gertrack/_tmp_test_settings.py
+
+# Django
+__pycache__/
+*.py[cod]
+*$py.class
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Éditeurs / OS
+.DS_Store
+*.swp
