@@ -1,0 +1,26 @@
+# Environnements virtuels Python
+venv/
+.venv/
+env/
+
+# Secrets / configuration locale
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Node / React
+node_modules/
+build/
+coverage/
+
+# Éditeurs / OS
+.DS_Store
+Thumbs.db
+
+# Claude Code (config machine)
+.claude/settings.local.json
